@@ -143,7 +143,8 @@ td:nth-child(3) {
                             <th>Proyecto</th>
                             <th>Nota</th>
                             <th>Categoría</th>
-                            <th>Prof. Guía</th>
+                            <th>Semestre</th>
+							<th>Repositorio</th>
                         </tr>
                     </thead>
                     <tbody id="este"></tbody>
@@ -166,14 +167,8 @@ td:nth-child(3) {
                     var trabajo = datos.data;
                     console.log(trabajo);
                     trabajo.forEach((x) => {
-                        t.innerHTML += `<tr style="${x.ok == 1 ? "background-color: var(--color-iluminadisimo); color: var(--color-oscurisimo)" : ""}"><td>${x.id}</td><td>${x.name}</td><td>${x.track}</td><td>${x.group}</td><td>${x.focus}</td></tr>`;
-						<td>${x.name}</td>
-					  	<td>${x.about}</td>
-				        <td>${x.grade}</td>
-				        <td>${x.title}</td>
-			            <td>${x.tutor}</td>
-			            <td>${x.category}</td>
-			            <td>${x.semester}</td>
+                        t.innerHTML += `<tr style="${x.ok == 1 ? "background-color: var(--color-iluminadisimo); color: var(--color-oscurisimo)" : ""}"><td>${x.name}</td><td>${x.name}</td><td>${x.about}</td><td>${x.grade}</td><td>${x.title}</td><td>{x.tutor}</td><td>${x.category}</td><td>${x.semester}</td><td>${x.repository}</td></tr>`;
+						
                     });
                 })
                 .catch((error) => {
