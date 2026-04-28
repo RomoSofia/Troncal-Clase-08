@@ -144,7 +144,6 @@ td:nth-child(3) {
                             <th>Nota</th>
                             <th>Categoría</th>
 							<th>Profesor Guía</th>
-                            <th>Semestre</th>
 							<th>Repositorio</th>
                         </tr>
                     </thead>
@@ -156,7 +155,7 @@ td:nth-child(3) {
 
         <script>
 			const t = document.querySelector("tbody");
-            const URL = "https://api.myjson.online/v1/records/743eb98a-52d0-4dd4-9188-916b5f0ac931";
+            const URL = "https://api.myjson.online/v1/records/7bfe070b-327e-4ae3-8fcf-326a93b38c77";
             fetch(URL)
                 .then((respuesta) => {
                     if (!respuesta.ok) {
@@ -177,8 +176,6 @@ td:nth-child(3) {
 						<td>${x.title}</td>
 						<td>{x.tutor}</td>
 						<td>${x.category}</td>
-						<td>${x.semester}</td>
-						<td>${x.repository}</td>
 						
 						</tr>`;
 						
